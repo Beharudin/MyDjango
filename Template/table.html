@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+<style>
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</head>
+
+<body class="exam_Background" data-spy="scroll" data-target=".nav">
+
+  <nav class="navbar navbar-expand-sm navbar-fixed-top  navbar-dark m-bottom-5 head_Background">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" style="float: left;margin-bottom: 0px;margin-right: 10px;">
+          <img src="{% static 'images/Ball.jpg' %}" height="60" width="70" alt="logo"> </a>
+           
+        <a href="#" class="navbar-brand myColor">Fadis League</a>
+      </div>
+
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-nav navbar-right collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav navbar-right">  
+          <li>
+            <a href="home" class="glyphicon myColor active" style="margin:7px;" >Matches</a>
+          </li>
+          
+            <li>
+            <a href="table" class="glyphicon myColor" style="margin:7px;">Table</a>
+          </li>
+          <li>
+            <a href="stats" class="glyphicon myColor" style="margin:7px;">Stats</a>
+          </li>
+
+          <li>
+            <a href="players" class="glyphicon myColor" style="margin:7px;">Players</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row text-center" style="margin-bottom: 60px;margin-top: 60px;">
+     <div class="col-md-7 mt-5">
+       <table class="mt-5">
+         <tr>
+            <th>Club</th>
+            <th>MP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>Pts</th>
+         </tr>
+         
+          {% for tab in tables%}
+          <tr>
+          <td>{{forloop.counter}} {{tab.team_name}}</td>
+          <td>{{tab.team_played}}</td>
+          <td>{{tab.team_win}}</td>
+          <td>{{tab.team_draw}}</td>
+          <td>{{tab.team_loose}}</td>
+          <td>{{tab.team_point}}</td>
+          </tr>
+          {%endfor%}
+       </table>
+    </div>
+   </div>
+  </div>
+
+    <footer>
+      <div class="fluid-container navbar-fixed-bottom head_Background myColor">
+        <p>
+          Copyright © Fadis League. All Rights Reserved|Contact Us: +91 90000
+          00000
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+ 
