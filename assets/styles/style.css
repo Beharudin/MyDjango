@@ -6,13 +6,16 @@ a:hover{
   color: wheat;
 }
 
-
-.head_Background {
-  background: #044680;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.exam_Background {
-  background: #ffffe6;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 nav ul li a:hover{
@@ -29,4 +32,15 @@ nav ul li a:hover{
   font-size: 16px;
   cursor: pointer;
 }
+
+.active{
+  color:white;
+   transform: scale(1.1);
+   background: #047db5;
+   text-transform: capitalize;
+   padding: 10px;
+   text-decoration: none;
+}
+
+
 
