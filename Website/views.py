@@ -4,7 +4,7 @@ from .models import Game, Player, Table
 # Create your views here.
 
 def home(request):
-    games=Game.objects.all()
+    games=Game.objects.all().order_by('game_year', 'game_month', 'game_day')
     return render(request, 'home.html',{'games':games})
 
 def table(request):
