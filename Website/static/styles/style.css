@@ -5,6 +5,24 @@
 a:hover{
   color: wheat;
 }
+div.relative {
+  position: relative;
+  top: 80px;
+}
+
+.head_Background {
+  background: #0be072;;
+}
+
+nav ul li a:hover{
+   color:white;
+   transform: scale(1.1);
+   background: #0cc997;
+   text-transform: capitalize;
+   padding: 10px;
+   text-decoration: none;
+}
+
 
 table {
   font-family: arial, sans-serif;
@@ -18,14 +36,6 @@ td, th {
   padding: 8px;
 }
 
-nav ul li a:hover{
-   color:white;
-   transform: scale(1.1);
-   background: #047db5;
-   text-transform: capitalize;
-   padding: 10px;
-   text-decoration: none;
-}
  .text_btn {
   border: none;
   background-color: inherit;
@@ -41,6 +51,7 @@ nav ul li a:hover{
    padding: 10px;
    text-decoration: none;
 }
+ 
 
 
 
