@@ -43,14 +43,6 @@ td, th {
   cursor: pointer;
 }
 
-.active{
-  color:white;
-   transform: scale(1.1);
-   background: #047db5;
-   text-transform: capitalize;
-   padding: 5px;
-   text-decoration: none;
-}
  
 
 
