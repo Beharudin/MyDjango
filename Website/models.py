@@ -34,5 +34,6 @@ class Table(models.Model):
    team_draw = models.IntegerField()
    team_loose = models.IntegerField()
    team_point = models.IntegerField()
+   team_goal = models.IntegerField()
 
 
