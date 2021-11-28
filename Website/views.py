@@ -8,7 +8,7 @@ def home(request):
     return render(request, 'home.html',{'games':games})
 
 def table(request):
-    tables=Table.objects.order_by('-team_point')
+    tables=Table.objects.order_by('-team_point','-team_goal')
     return render(request, 'table.html',{'tables':tables})
 
 def stats(request):
