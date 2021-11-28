@@ -72,6 +72,7 @@ td, th {
             <th>D</th>
             <th>L</th>
             <th>Pts</th>
+            <th>G</th>
          </tr>
          
           {% for tab in tables%}
@@ -82,6 +83,7 @@ td, th {
           <td>{{tab.team_draw}}</td>
           <td>{{tab.team_loose}}</td>
           <td>{{tab.team_point}}</td>
+           <td>{{tab.team_goal}}</td>
           </tr>
           {%endfor%}
        </table>
