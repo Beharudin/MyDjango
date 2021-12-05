@@ -16,6 +16,7 @@ class Game(models.Model):
    game_year = models.IntegerField()
    team1_goals = models.IntegerField()
    team2_goals = models.IntegerField()
+   game_no = models.IntegerField(default=1)
    match_status = models.CharField(max_length=20, choices=match_Status, default='FT')
    game_status = models.BooleanField(default=False)
 
