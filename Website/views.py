@@ -5,7 +5,8 @@ from .models import Game, Player, Table
 
 def home(request):
     games=Game.objects.all().order_by('game_year', 'game_month', 'game_day', 'game_no')
-    return render(request, 'home.html',{'games':games})
+    champ=Champ.objects.all().order_by('game_year', 'game_month', 'game_day', 'game_no')
+    return render(request, 'home.html',{'games':games, 'champ':champ})
 
 def table(request):
     tables=Table.objects.order_by('-team_point','-team_goal')
