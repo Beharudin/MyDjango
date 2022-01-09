@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from datetime import date
-from .models import Game, Player, Table
+from .models import Game, Player, Table, Champ
 # Create your views here.
 
 def home(request):
