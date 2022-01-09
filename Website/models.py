@@ -38,3 +38,20 @@ class Table(models.Model):
    team_goal = models.IntegerField()
 
 
+
+class Champ(models.Model):
+   team1_name = models.CharField(max_length=50)
+   team2_name = models.CharField(max_length=50)
+   stadium = models.CharField(max_length=50)
+   week_day = models.CharField(max_length=50)
+   game_day = models.IntegerField()
+   game_month = models.IntegerField()
+   game_year = models.IntegerField()
+   team1_goals = models.IntegerField()
+   team2_goals = models.IntegerField()
+   team1_Pen_goals = models.IntegerField(default=0)
+   team2_Pen_goals = models.IntegerField(default=0)
+   game_no = models.IntegerField(default=1)
+   match_status = models.CharField(max_length=20, choices=match_Status, default='FT')
+   game_status = models.BooleanField(default=False)
+   game_pen = models.BooleanField(default=False)
