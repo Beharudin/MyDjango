@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'jn8l1=(7wtf=#ofvnhuw@0wgbx+4z1l$nn)koxr0#&@u_+$txl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['fadisleague.herokuapp.com','127.0.0.1', 'localhost']
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
