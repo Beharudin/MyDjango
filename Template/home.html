@@ -49,6 +49,12 @@
       </div>
     </div>
   </nav>
+  <!-- congra -->
+    <marquee direction="left"><p style="color: green;">CONGRATULATIONS, BAGA GAMMADDAN  WAL AGARRAA</p></marquee>
+
+  <div class="fluid-container m-1 thumbnail">
+  <p>FADIS LEAGUE</p>
+  <hr>
   <div class="container m-5">
     <div class="row mt-5" style="margin-bottom: 60px;">
      
@@ -76,11 +82,54 @@
    </div>
   </div>
 
+<!--champions league-->
+<div class="fluid-container m-1 thumbnail">
+  <p>CHAMPIONS LEAGUE</p>
+  <hr>
+<div class="container m-5">
+  <div class="row mt-5" style="margin-bottom: 60px;">
+   
+     {% for gam in champ %}
+     {% if gam.game_status %}
+     <!--pen-->
+     {% if gam.game_pen %}
+     <div class="thumbnail mt-5 col-sm-7 col-xs-10 text-center">
+     <div class="col-md-7 pb-3">
+        <h4 >{{gam.match_status}}</h4>
+        <h4> {{gam.team1_name}} {{gam.team1_goals}} ({{gam.team1_Pen_goals}}:{{gam.team2_Pen_goals}}) {{gam.team2_goals}} {{gam.team2_name}}</h4>
+        <h5> Day: {{gam.game_day}}/{{gam.game_month}}/{{gam.game_year}} {{gam.week_day}}</h5>
+        <h5> Stadium: {{gam.stadium}}</h5>
+      </div>
+    </div>
+     <!---->
+     {% else %}
+     <div class="thumbnail mt-5 col-sm-7 col-xs-10 text-center">
+     <div class="col-md-7 pb-3">
+        <h4 >{{gam.match_status}}</h4>
+        <h4> {{gam.team1_name}} {{gam.team1_goals}}:{{gam.team2_goals}} {{gam.team2_name}}</h4>
+        <h5> Day: {{gam.game_day}}/{{gam.game_month}}/{{gam.game_year}} {{gam.week_day}}</h5>
+        <h5> Stadium: {{gam.stadium}}</h5>
+      </div>
+    </div>
+    {%endif%} 
+      {% else %}
+      <div class="thumbnail mt-5 col-sm-7 col-xs-10 text-center">
+        <div class="col-md-7 pb-3">
+            <h4> {{gam.team1_name}} VS {{gam.team2_name}}</h4>
+            <h5> Day: {{gam.game_day}}/{{gam.game_month}}/{{gam.game_year}} {{gam.week_day}}</h5>
+              <h5> Stadium: {{gam.stadium}}</h5>
+          </div>
+        </div>
+      {%endif%} 
+    {%endfor%}
+  </div>
+ </div>
+</div>
+
     <footer>
       <div class="fluid-container navbar-fixed-bottom head_Background myColor">
         <p>
-          Copyright © Fadis League. All Rights Reserved|Contact Us: +91 90000
-          00000
+          Copyright © Fadis League. All Rights Reserved|Contact Us: +251 912078640
         </p>
       </div>
     </footer>
